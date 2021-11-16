@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Deixa apresentavel em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floricultura</title>
+
+    <!-- Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- MD - Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- CSS Comum a todas as páginas -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- jQuey CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <!-- MD - Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Scripts comuns -->
+    <script src="js/tools.js"></script>
+
+    <!-- Script da Página -->
+    <script src="js/checkout.js"></script>
+</head>
+<body>
+    <div class="progress">
+        <div class="indeterminate"></div>
+    </div>
+    <div id="header">
+        <h1 id="page-title">Finalizar Pedido</h1>
+    </div>
+    <div class="container">
+        <h4 id="client-name">Resumo da Venda</h3>
+        <h5 id="total-order">Total: R$ 0,00</h5>
+        <ul class="collection">
+
+        </ul>
+        <div class="selects input-field col s12">
+            <select id="pay-method">
+              <option value="" disabled selected>Forma de pagamento</option>
+              <option value="Crédito">Crédito</option>
+              <option value="Débito">Débito</option>
+              <option value="Dinheiro">Dinheiro</option>
+              <option value="Pix">Pix</option>
+            </select>
+        </div>
+
+        <div class="selects input-field col s12">
+            <select id="select-ship">
+              <option value="" disabled selected>Transportadora</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="tx_entrega" type="text" class="validate">
+                <label for="tx_entrega">Taxa de Entrega</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="vl_desconto" type="text" class="validate">
+              <label for="vl_desconto">Desconto</label>
+            </div>
+        </div>
+
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large light-green lighten-3">
+                <i class="large material-icons">check</i>
+            </a>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="row">
+            <div class="fcontainer">
+                <a href="index.html" id="home">Home</a>
+                <a id="btn_logout">Sair</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

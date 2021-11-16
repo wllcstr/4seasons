@@ -1,0 +1,109 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "andressa",
+      "senha": "q1w2e3r4",
+      "role": "funcionario"
+    },
+    {
+      "id": 2,
+      "nome": "julia",
+      "senha": "q1w2e3r4",
+      "role": "cliente"
+    }
+  ],
+  "clientes": [
+    {
+      "nome": "William Da Silva",
+      "cpf": "00000000000",
+      "endereco": "Tobias Barreto, 263 - Apto 144",
+      "telefone": "(47) 99133-9951",
+      "id": 1,
+      "userId": null
+    },
+    {
+      "id": 2,
+      "nome": "Sandro",
+      "endereco": "Rua São Paulo 940",
+      "cpf": "00000000000",
+      "telefone": "(77) 98866-4029",
+      "userId": null
+    },
+    {
+      "id": 3,
+      "nome": "Júlia",
+      "endereco": "Benjamin Constant",
+      "cpf": "00000000000",
+      "telefone": "(47) 98899-4433",
+      "userId": 2
+    }
+  ],
+  "transportadoras": [
+    {
+      "nome": "Transportadora 1",
+      "telefone": "555 555552",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "nome": "Transportadora 2",
+      "telefone": "22 222222222"
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Cravo",
+      "descricao": "Alguma descrição",
+      "valor": 12.25,
+      "saldo": 23
+    },
+    {
+      "id": 2,
+      "nome": "Crisântemo",
+      "descricao": "Alguma descrição",
+      "valor": 7,
+      "saldo": 3
+    },
+    {
+      "id": 3,
+      "nome": "Rosa",
+      "descricao": "Alguma descrição",
+      "valor": 44,
+      "saldo": 12
+    },
+    {
+      "id": 99,
+      "nome": "Margarida",
+      "descricao": "Alguma descrição",
+      "valor": 200,
+      "saldo": 2
+    }
+  ],
+  "vendas": [
+    {
+      "id": 1,
+      "data": "2021/11/09",
+      "desconto": 15,
+      "txEntrega": 10,
+      "formaPgto": "Crédito",
+      "clienteId": 1,
+      "transportadoraId": 1
+    }
+  ],
+  "itensVenda": [
+    {
+      "id": 1,
+      "vendaId": 1,
+      "itemId": 2,
+      "qtd": 2
+    },
+    {
+      "id": 2,
+      "vendaId": 1,
+      "itemId": 1,
+      "qtd": 4
+    }
+  ]
+}

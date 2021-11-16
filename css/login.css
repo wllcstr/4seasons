@@ -1,0 +1,9 @@
+.login-form {
+    width: 400px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+.row.center {
+    text-align: center;
+}

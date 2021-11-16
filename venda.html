@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Deixa apresentavel em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floricultura</title>
+
+    <!-- Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- MD - Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- CSS Comum a todas as páginas -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- jQuey CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <!-- MD - Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Scripts comuns -->
+    <script src="js/tools.js"></script>
+
+    <!-- Script da Página -->
+    <script src="js/venda.js"></script>
+</head>
+<body>
+    <div class="progress">
+        <div class="indeterminate"></div>
+    </div>
+    <div id="header">
+        <h1 id="page-title">Pedido</h1>
+    </div>
+    <div class="container">
+        <h4 id="client-name">Nova venda de caixa</h3>
+        <h5 id="total-order">Total: R$ 0,00</h5>
+        <ul class="collection">
+        </ul>
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large light-green lighten-3">
+                <i class="large material-icons">list</i>
+            </a>
+            <ul>
+                <li><a id="clear-chart" class="btn-floating red lighten-1"><i class="material-icons">do_not_disturb</i></a></li>
+                <li><a href="#modal-items" id="add-item" class="btn-floating light-green lighten-3 modal-trigger"><i class="material-icons">add</i></a></li>
+                <li><a href="checkout.html" id="close-order" class="btn-floating light-green lighten-3"><i class="material-icons">check</i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="row">
+            <div class="fcontainer">
+                <a href="index.html" id="home">Home</a>
+                <a id="btn_logout">Sair</a>
+            </div>
+        </div>
+    </div>
+    <div id="modal-items" class="modal">
+        <div class="modal-content">
+          <h4>Escolha um item para adicionar</h4>
+            <div class="itens-content">
+                <ul class="collection-modal">
+                </ul>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <a class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+        </div>
+      </div>
+</body>
+</html>
