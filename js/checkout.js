@@ -26,6 +26,8 @@ $(document).ready(function () {
     $('select').formSelect();
     var subtotal = 0;
 
+    $("#finish").click(gerarVenda);
+
 });
 
 function getChartItens() {
@@ -95,32 +97,36 @@ function gerarVenda() {
         url: getAPI() + '/vendas',
     }).done(function (res) {
         nId = res.length;
+
+        var oVenda = {};
+        var cid = parseInt(sessionStorage.getItem("cid", cid));
+        oVenda.id =  nId;
+        oVenda.clienteId =  cid ? cid : 0;
+        oVenda.desconto = 0;
+        oVenda.transportadoraId = $("#select-ship").val();
+        oVenda.desconto = $("#vl_desconto").val();
+        oVenda.txEntrega = $("#tx_entrega").val();
+        oVenda.formaPgto = $("#pay-method").val();
+        var today = new Date();
+        var date = today.getDay();
+        if(date.toString().length < 2)
+            date = "0" + date;
+        var month = today.getMonth();
+        if(month.toString().length < 2)
+            month = "0" + month;
+        oVenda.data = date + "/" + month + "/" + today.getFullYear();
+    
+        $.ajax({
+            type: 'POST',
+            url: getAPI() + '/vendas',
+            data: oVenda
+        }).done(function () {
+            gravaItensVenda(nId);
+        }).fail(function() {
+            toast("Falha ao salvar os dados");
+            hideLoading();
+        });
     });
-
-
-    var oVenda = {};
-    var cid = parseInt(sessionStorage.getItem("cid", cid));
-    oVenda.id =  nId;
-    oVenda.clienteId =  cid ? cid : 0;
-    oVenda.desconto = 0;
-    oVenda.transportadoraId = $("#select-ship").val();
-    oVenda.desconto = $("#vl_desconto").val();
-    oVenda.txEntrega = $("#tx_entrega").val();
-    oVenda.formaPgto = $("#pay-method").val();
-    var today = new Date();
-    oVenda.data = today.getDay().padStart(2, '0') + "/" + today.getMonth().padStart(2, '0') + "/" + today.getFullYear();
-
-    $.ajax({
-        type: 'POST',
-        url: getAPI() + '/vendas',
-        data: oVenda
-    }).done(function () {
-        gravaItensVenda(nId);
-    }).fail(function() {
-        toast("Falha ao salvar os dados");
-        hideLoading();
-    });
-
 }
 
 function gravaItensVenda(vendaId) {
@@ -154,13 +160,10 @@ function finalizaProcesso() {
             <h5>Pedido Concluído</h5>
             <p>Seu pedido já está no nosso banco de dados</p>
             <p>Obrigado pela preferência</p>
-            <button class="btn waves-effect waves-light green lighten-2" type="submit" id="goHome" name="home">Voltar para o início
+            <a href="index.html" class="btn waves-effect waves-light green lighten-2" type="submit" id="goHome" name="home">Voltar para o início
                 <i class="material-icons right">home</i>
-            </button>
+            </a>
         </div>
     `;
     $(".container").html(greetingData);
-    $("#goHome"),click(function() {
-        window.location = "index.html";
-    });
 }
