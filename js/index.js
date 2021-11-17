@@ -38,4 +38,8 @@ $(document).ready(function () {
     $("#btn_order").click(function() {
         window.location = "venda.html";
     });
+
+    $("#btn_reports").click(function() {
+        window.location = "report.html";
+    });
 });

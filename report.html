@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <!-- Deixa apresentavel em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floricultura</title>
+    <title>Floricultura - Clientes</title>
 
     <!-- Materialize Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- CSS Comum a todas as páginas -->
     <link href="css/style.css" rel="stylesheet">
-     <!-- CSS de página -->
-     <link href="css/index.css" rel="stylesheet">
 
     <!-- jQuey CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -23,36 +21,18 @@
     <script src="js/tools.js"></script>
 
     <!-- Script da Página -->
-    <script src="js/index.js"></script>
+    <script src="js/report.js"></script>
 </head>
 <body>
     <div class="progress">
         <div class="indeterminate"></div>
     </div>
     <div id="header">
-        <h1 id="page-title">Início</h1>
+        <h1 id="page-title">Relatório de Vendas</h1>
     </div>
     <div class="container">
-        <div class="row">
-            <button class="btn waves-effect waves-light green lighten-2" type="submit" id="btn_clientes" name="client">Clientes
-                <i class="material-icons right">supervisor_account</i>
-            </button>
-        </div>
-        <div class="row">
-            <button class="btn waves-effect waves-light green lighten-2" type="submit" id="btn_transportadoras" name="shipments">Transportadoras
-                <i class="material-icons right">local_shipping</i>
-            </button>
-        </div>
-        <div class="row">
-            <button class="btn waves-effect waves-light green lighten-2" type="submit" id="btn_reports" name="reports">Relatório de Vendas
-                <i class="material-icons right">featured_play_list</i>
-            </button>
-        </div>
-        <div class="row">
-            <button class="btn waves-effect waves-light green lighten-2" type="submit" id="btn_estoque" name="stock">Estoque
-                <i class="material-icons right">store</i>
-            </button>
-        </div>
+        <ul class="collection">
+        </ul>
     </div>
     <div id="footer">
         <div class="row">

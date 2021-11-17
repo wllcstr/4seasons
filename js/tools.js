@@ -58,6 +58,11 @@ function createOptions() {
                 </button>
             </div>
             <div class="row">
+                <button class="btn waves-effect waves-light green lighten-2" type="submit" id="btn_reports" name="reports">Relatório de Vendas
+                    <i class="material-icons right">featured_play_list</i>
+                </button>
+            </div>
+            <div class="row">
                 <button class="btn waves-effect waves-light" type="submit" id="btn_order" name="order">Nova Venda
                     <i class="material-icons right">shopping_cart</i>
                 </button>

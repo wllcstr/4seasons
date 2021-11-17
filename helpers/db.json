@@ -19,14 +19,15 @@
       "cpf": "00000000000",
       "endereco": "Tobias Barreto, 263 - Apto 144",
       "telefone": "(47) 99133-9951",
-      "id": 1,
-      "userId": null
+      "preferencia": "Orquídea",
+      "id": 1
     },
     {
       "id": 2,
       "nome": "Sandro",
       "endereco": "Rua São Paulo 940",
       "cpf": "00000000000",
+      "preferencia": "",
       "telefone": "(77) 98866-4029",
       "userId": null
     },
@@ -36,6 +37,7 @@
       "endereco": "Benjamin Constant",
       "cpf": "00000000000",
       "telefone": "(47) 98899-4433",
+      "preferencia": "",
       "userId": 2
     }
   ],
@@ -82,43 +84,7 @@
     }
   ],
   "vendas": [
-    {
-      "id": "0",
-      "clienteId": "2",
-      "desconto": "10",
-      "transportadoraId": "1",
-      "txEntrega": "10",
-      "formaPgto": "Crédito",
-      "data": "02/10/2021"
-    },
-    {
-      "id": "1",
-      "clienteId": "2",
-      "desconto": "11",
-      "transportadoraId": "1",
-      "txEntrega": "12",
-      "formaPgto": "Crédito",
-      "data": "02/10/2021"
-    }
   ],
   "itensVenda": [
-    {
-      "vendaId": "0",
-      "itemId": "1",
-      "qtd": "1",
-      "id": 1
-    },
-    {
-      "vendaId": "1",
-      "itemId": "2",
-      "qtd": "1",
-      "id": 2
-    },
-    {
-      "vendaId": "1",
-      "itemId": "99",
-      "qtd": "1",
-      "id": 3
-    }
   ]
 }

@@ -107,6 +107,7 @@ function gerarVenda() {
         oVenda.desconto = $("#vl_desconto").val();
         oVenda.txEntrega = $("#tx_entrega").val();
         oVenda.formaPgto = $("#pay-method").val();
+        oVenda.total = subtotal * ((100 - oVenda.desconto)/100);
         var today = new Date();
         var date = today.getDay();
         if(date.toString().length < 2)
