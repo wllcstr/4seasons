@@ -37,6 +37,8 @@ function getClientData(cid) {
             $("#cpf").focus();
             $("#endereco").val(res.endereco);
             $("#endereco").focus();
+            $("#preferencias").val(res.preferencia);
+            $("#preferencias").focus();
             $("#telefone").val(res.telefone);
             $("#telefone").focus();
             $("#telefone").blur();
@@ -54,7 +56,8 @@ function salvaCliente() {
         nome: $("#nome").val(),
         cpf: $("#cpf").val(),
         endereco: $("#endereco").val(),
-        telefone: $("#telefone").val()
+        telefone: $("#telefone").val(),
+        preferencia: $("#preferencias").val()
     }
     
     if(!oCliente.nome || !oCliente.cpf || !oCliente.endereco || !oCliente.telefone) {
